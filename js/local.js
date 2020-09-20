@@ -76,4 +76,15 @@ $(document).ready(function(){
              }
              $("#contactMsgSubmit").removeClass().addClass(msgClasses).text(msg);
          }
+         
+         $('#WAButton').floatingWhatsApp({
+             phone: '+15612719502', //WhatsApp Business phone number International format-
+             headerTitle: 'Chat with us on WhatsApp!', //Popup Title
+             popupMessage: 'Hello, how can i help you?', //Popup Message
+             showPopup: true, //Enables popup display
+             buttonImage: '<img src="images/whatsapp.svg" />', //Button Image
+            //headerColor: 'crimson', //Custom header color
+            //backgroundColor: 'crimson', //Custom background button color
+            position: "right"
+        });
 });
