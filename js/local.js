@@ -22,7 +22,8 @@ $(document).ready(function(){
 
          function contactSubmitForm(fullname) {
              // initiate variables with form content
-             console.log("Submit POST");
+            var url = window.location.href;
+            console.log("Submit Contact via POST");
             var name = $("#fullname").val();
      		var email = $("#email").val();
      		var phone = $("#phone").val();
@@ -37,7 +38,7 @@ $(document).ready(function(){
                  type: "POST",
                  url: "https://us-central1-mobispread.cloudfunctions.net/contact",
                  //data: "name=" + name + "&email=" + email + "&phone=" + phone + "&select=" + select + "&terms=" + terms,
-                 data: "name=" + name + "&email=" + email + "&phone=" + phone + "&message=" + message + "&product=chandys",
+                 data: "name=" + name + "&email=" + email + "&phone=" + phone + "&message=" + message + "&product=chandys"  + "&url=" + url,
                  success: function(data) {
                      if (data.success == true) {
                          contactFormSuccess();
